@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <iframe class="iheader" name="_parent" src="template/header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </header>
+
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llena el formulario de Contacto</h2>
+
+        <form class="contacto" action="envia.php" method="post">
+            <fieldset>
+            <label>Nombre: <span>*</span>
+			    <input type="text" name="nombre" placeholder="Nombre" required>
+		    </label>
+
+		    <label>Apellido: <span>*</span>
+			    <input type="text" name="apellido" placeholder="Apellido"  required>
+		    </label>
+		
+            <label>Email: <span>*</span>
+                <input type="email" name="email" placeholder="Email" class="campo-form" required>
+            </label>
+
+            <label>Telefono: <span>*</span>
+                <input type="tel" name="telefono" placeholder="Telefono" class="campo-form" required>
+            </label>
+            
+            <label>Consulta:
+                <textarea name="consulta" required></textarea>
+            </label>
+
+            </fieldset>
+                
+
+            <fieldset>
+                <legend>Información de contacto</legend>
+                <label for="opciones">Medio de contacto</label>
+                <select id="opciones" name="contacto"  required>
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="Telefono">Telefono</option>
+                    <option value="Email">Email</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" min="0" max="100" name="cantidad">
+
+                <p>Como desea ser Contactado:</p>
+
+                <p>Si eligió Teléfono, elija la fecha y la hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" name="hora" min="09:00" max="18:00">
+                
+            </fieldset>
+<!--
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p>Como desea ser Contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono">Teléfono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+
+                    <label for="correo">E-mail</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+
+                <p>Si eligió Teléfono, elija la fecha y la hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" min="09:00" max="18:00">
+
+            </fieldset>
+     -->
+            
+
+            <input type="submit" value="Enviar" class="boton boton-verde">
+
+        </form>
+    </main>
+
+    <footer class="site-footer seccion">
+        <iframe class="ifooter" name="_parent" src="template/footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </footer>
+</body>
+</html>
